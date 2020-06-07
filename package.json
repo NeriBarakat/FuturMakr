@@ -1,19 +1,25 @@
 {
   "name": "futurmakr",
+  "email": "nermien@treenodes.com",
+  "url": "www.futurmakr.com",
   "version": "1.0.0",
   "description": "- Bootstrap Css/JS -",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NeriBarakat/FuturMakr.git"
   },
-  "author": "Nermien Barakat -- nermien@treenodes.com",
+  "author": "Nermien Barakat/ Email:nermien@treenodes.com/ Company:www.treenode.com",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/NeriBarakat/FuturMakr/issues"
   },
-  "homepage": "https://github.com/NeriBarakat/FuturMakr#readme"
+  "homepage": "https://github.com/NeriBarakat/FuturMakr#readme",
+  "devDependencies": {
+    "webpack": "^4.43.0"
+  },
+  "dependencies": {
+    "fsevents": "^2.1.3"
+  }
 }
