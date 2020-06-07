@@ -1,0 +1,19 @@
+{
+  "name": "futurmakr",
+  "version": "1.0.0",
+  "description": "- Bootstrap Css/JS -",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NeriBarakat/FuturMakr.git"
+  },
+  "author": "Nermien Barakat -- nermien@treenodes.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NeriBarakat/FuturMakr/issues"
+  },
+  "homepage": "https://github.com/NeriBarakat/FuturMakr#readme"
+}
