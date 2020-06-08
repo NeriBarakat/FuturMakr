@@ -4,8 +4,7 @@
  * Version: 0.1
  * Description:
  */
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
@@ -14,3 +13,5 @@
 
 // App style
 @import 'pages/landing.scss';
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
