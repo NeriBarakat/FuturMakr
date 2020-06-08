@@ -2,4 +2,4 @@
 import '../scss/main.scss';
 import 'bootstrap';
 
-$(document.body).css('background-color', 'blue');
+$(document.body).css('background-color', 'green');
