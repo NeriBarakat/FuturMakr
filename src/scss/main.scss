@@ -9,9 +9,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 // Customize Bootstrap
+
+@import './color.scss';
+@import './layout.scss';
 @import '_customize-bootstrap.scss';
 
 // App style
 @import 'pages/landing.scss';
 // Bootstrap
+
 @import '~bootstrap/scss/bootstrap';

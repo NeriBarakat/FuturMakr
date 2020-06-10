@@ -5,29 +5,89 @@
   <!-- Required meta tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Font tags -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600&display=swap" rel="stylesheet">
   <title>FuturMakr</title>
 </head>
 
-<body>
+<body class="landing">
   <!-- Begin Header -->
-  <header>
-    <nav class="navbar navbar-expand-md navbar-dark mx-xs-4 mx-lg-5 my-4"> <a class=navbar-brand href=#> <img
-          src="assets/images/logos/futurmakr-logo.svg" class=img-fluid alt=FuturMakrStudio> </a> <button
-        class=navbar-toggler type=button data-toggle=collapse data-target=#mainMenuNav
-        aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation"> <span
-          class=navbar-toggler-icon></span> </button>
-      <div class="collapse navbar-collapse" id=mainMenuNav>
-        <div class="navbar-nav ml-auto">
-          <div class="media bg-very-dark rounded p-3 my-2">
-
-            <div class=my-auto><button class="btn mr-2 btn-primary">Request a demo</button><button
-                class="btn btn-outline-primary">logout</button></div>
+  <header class="nav-bg">
+    <nav class="navbar navbar-expand-md navbar-dark mb-3 fixed-top nav-bg">
+      <div class="container-fluid"><a class="navbar-brand" href="./index.html"><img
+            src="assets/images/logos/futurmakr-logo.svg" class="img-fluid" alt="FuturMakrStudio"></a><button
+          class="navbar-toggler" data-toggle="collapse" data-target="#mainNav"><span
+            class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <div class="navbar-nav ml-auto">
+            <div class="media bg-very-dark rounded p-3 my-2">
+              <button class="btn mr-3 btn-primary">Request a demo</button>
+              <button class="btn btn-outline-primary">logout</button>
+            </div>
           </div>
         </div>
       </div>
     </nav>
   </header>
-  <!-- End page Header -->
+  <!-- End Header -->
+  <!-- Begin main -->
+  <main role="main" class="mb-4 ">
+    <!-- Begin Hero -->
+    <div class="text-center ">
+      <div class="col-md-10 p-lg-9 mx-auto">
+        <h1 class="display-3 text-uppercase "> Cutting-edge<br> education for
+          <br>self-actualisation
+        </h1>
+        <img src="assets/images/landing/Landing_iPad_Hero.svg" class="img-fluid mt-5" alt="FuturMakrStudio">
+        <p class="display-4 pb-4">FuturMakr is the only end-to-end, holistic,<br> talent development system on
+          the
+          market.</p>
+        <p class="mono-gray-4-color pb-4 f-size-24">Powered by the latest AI technology and trained by some of the
+          foremost
+          figures
+          shaping industry and
+          education today, FuturMakr guides students through a bespoke and in-depth user-journey to develop the habits,
+          skills, knowledge, connections and work opportunities needed to succeed in their chosen field. </p>
+        <button class="btn btn-lg btn-primary btn-lg text-left clearfix my-5" type="submit">Request a demo
+          <span class="float-right ml-5"><img class="pl-5" src="assets/images/icons/arrow-right.svg"></span></button>
+      </div>
+    </div>
+    <!-- Begin Tabs -->
+    <div class="container-fluid">
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs fm-tabs" role="tablist">
+        <li class="nav-item fm-item">
+          <a class=" fm-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+            aria-selected="true">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="fm-link " id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+            aria-selected="false">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="fm-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+            aria-selected="false">Contact</a>
+        </li>
+      </ul>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+      </div>
+
+    </div>
+  </main>
+  <!-- End main ctr-->
+  <footer class="footer">
+    <div class="container">
+      <a class=" w-100 d-block my-4" href="#"><img src="assets/images/logos/logo-footer.svg" class="img-fluid"
+          alt="FuturMakr Studio"></a>
+      <div class="pb-3 w-100 text-right"> <span class="p-3">© 2020 WONDRMAKR GROUP LTD. ALL RIGHTS
+          RESERVED.</span> </div>
+      </nav>
+    </div>
+  </footer>
 </body>
 
 </html>
