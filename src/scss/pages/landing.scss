@@ -2,16 +2,36 @@
   .display-3 {
     letter-spacing: 0.26em;
     font-size: 4.5vw;
-    text-shadow: 0px 0px 6px #30a8a2, 0px 0px 94px rgba(48, 168, 162, 0.6);
+    text-shadow: 0px 0px 6px $primary-seegreen,
+      0px 0px 94px rgba(48, 168, 162, 0.6);
     font-weight: 200;
-    //line-height: 4.6875;
   }
-  .lead {
-    font-size: 2.5vw;
-    line-height: 1.5;
-  }
+
   .nav-bg {
     background-color: rgba(17, 17, 17, 0.9);
     height: 80px;
+  }
+  .lime-outline-hexa {
+    left: 0;
+    top: 10%;
+  }
+  .g-outline-hexa-landing {
+    right: 0;
+    top: 50%;
+  }
+  .Orange-hexa {
+    left: 0;
+    top: 60%;
+  }
+}
+/* Animations */
+
+[data-aos='fade-up'] {
+  transform: skewX(45deg);
+  opacity: 0;
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: skewX(0);
+    opacity: 1;
   }
 }

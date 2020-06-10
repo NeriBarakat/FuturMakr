@@ -8,28 +8,38 @@
 }
 
 // FuturMakr custom tabs with green button border
+.fm-customize-tabs {
+  .fm-tabs {
+    background-color: $eerie-black;
+    a {
+      width: 216px;
+      height: 81px;
+      padding-top: 16px;
+      padding-right: 0px;
+      padding-bottom: 16px;
+      padding-left: 24px;
+      border-bottom: 8px solid $jet-gray;
+      background-color: $jet-gray;
+      color: $mono-gray-4;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      //border-radius: 0px;
+      display: block;
+    }
+    .fm-link.active,
+    a:hover {
+      color: $white;
+      text-decoration: none;
+      border: 1px solid $black;
+      border-bottom: 8px solid $primary-seegreen;
+      background-color: $mono-gray-2;
+    }
+  }
+  .fm-tabs-content {
+    background-color: $eerie-black;
+  }
+}
 
-.fm-tabs {
-  a {
-    width: 216px;
-    height: 81px;
-    padding-top: 16px;
-    padding-right: 0px;
-    padding-bottom: 16px;
-    padding-left: 24px;
-    border-bottom: 8px solid $jet-gray;
-    background-color: $jet-gray;
-    color: $mono-gray-4;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    //border-radius: 0px;
-    display: block;
-  }
-  .fm-link.active,
-  a:hover {
-    color: $white;
-    text-decoration: none;
-    border: 1px solid $black;
-    border-bottom: 8px solid $primary-seegreen;
-    background-color: $mono-gray-2;
-  }
+// Footer
+footer {
+  background-color: $jet-gray;
 }
