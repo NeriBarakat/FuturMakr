@@ -2,11 +2,29 @@
 .f-size-24 {
   font-size: 1.5rem;
 }
+.f-size-32 {
+  font-size: 2rem;
+}
+.l-h-36 {
+  line-height: 36px;
+}
+.l-h-48 {
+  line-height: 48px;
+}
 // Font Color
 .mono-gray-4-color {
-  color: $mono-gray-4;
+  color: $mono-gray-4; //bdbdbd
 }
-
+.mono-gray-5-color {
+  color: $mono-gray-5; //e0e0e0
+}
+// background
+.gray-1-bg {
+  background-color: $jet-gray;
+}
+.nero-black-bg {
+  background-color: $nero-black;
+}
 // FuturMakr custom tabs with green button border
 .fm-customize-tabs {
   .fm-tabs {
@@ -38,7 +56,11 @@
     background-color: $eerie-black;
   }
 }
-
+.fm-form {
+  .fm-form-ins {
+    border-bottom: 12px solid $primary-seegreen;
+  }
+}
 // Footer
 footer {
   background-color: $jet-gray;
