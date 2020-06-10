@@ -10,8 +10,32 @@
   font-size: 1.5rem;
 }
 
+.f-size-32 {
+  font-size: 2rem;
+}
+
+.l-h-36 {
+  line-height: 36px;
+}
+
+.l-h-48 {
+  line-height: 48px;
+}
+
 .mono-gray-4-color {
   color: #bdbdbd;
+}
+
+.mono-gray-5-color {
+  color: #e0e0e0;
+}
+
+.gray-1-bg {
+  background-color: #333333;
+}
+
+.nero-black-bg {
+  background-color: #292929;
 }
 
 .fm-customize-tabs .fm-tabs {
@@ -40,6 +64,10 @@
 }
 .fm-customize-tabs .fm-tabs-content {
   background-color: #232323;
+}
+
+.fm-form .fm-form-ins {
+  border-bottom: 12px solid #30a8a2;
 }
 
 footer {
@@ -84,6 +112,9 @@ footer {
 .landing .Orange-hexa {
   left: 0;
   top: 60%;
+}
+.landing .card {
+  background-color: transparent;
 }
 
 /* Animations */
