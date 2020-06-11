@@ -18,7 +18,7 @@
 
     <nav class="navbar navbar-dark mb-3 fixed-top nav-bg">
       <div class="container-fluid">
-        <div class="navbar-nav ml-auto d-none d-sm-block d-md-none">
+        <div class="navbar-nav ml-auto d-block d-md-none d-sm-none">
           <div class="media bg-very-dark rounded p-3 my-2">
             <a href="#request-demo" data-smooth="#request-demo" class="btn mr-3 btn-primary ">Request a demo</a>
             <a class="btn btn-outline-primary">logout</a>
@@ -27,7 +27,7 @@
         <a class="navbar-brand" href="./index.html"><img src="assets/images/logos/futurmakr-logo.svg" class="img-fluid"
             alt="FuturMakrStudio"></a>
 
-        <div class="navbar-nav ml-auto d-sm-none d-md-block">
+        <div class="navbar-nav ml-auto d-none d-sm-block">
           <div class="media bg-very-dark rounded p-3 my-2">
             <a href="#request-demo" data-smooth="#request-demo" class="btn mr-3 btn-primary ">Request a demo</a>
             <a class="btn btn-outline-primary">logout</a>
@@ -76,9 +76,9 @@
       </div>
     </div>
     <!-- Begin Tabs -->
-    <div class="ml-5 ml-5 my-5 fm-customize-tabs">
+    <div class="ml-5 ml-5 my-5 fm-customize-tabs ">
       <!-- Nav tabs -->
-      <ul class="nav ml-5 fm-tabs d-none d-sm-block" role="tablist">
+      <ul class="nav ml-5 fm-tabs" role="tablist">
         <li class="nav-item fm-item">
           <a class=" fm-link active" id="pathway-tab" data-toggle="tab" href="#pathway" role="tab"
             aria-controls="pathway" aria-selected="true">Pathway</a>
@@ -96,29 +96,6 @@
             aria-selected="false">Parkr</a>
         </li>
       </ul>
-
-
-      <!-- Nav tabs small-->
-      <ul class="nav ml-5 fm-tabs-s d-block d-sm-none" role="tablist">
-        <li class="nav-item fm-item">
-          <a class=" fm-link active" id="pathway-tab" data-toggle="tab" href="#pathway" role="tab"
-            aria-controls="pathway" aria-selected="true">Pathway</a>
-        </li>
-        <li class="nav-item">
-          <a class="fm-link " id="flow-tab" data-toggle="tab" href="#flow" role="tab" aria-controls="flow"
-            aria-selected="false">Flow</a>
-        </li>
-        <li class="nav-item">
-          <a class="fm-link" id="wondermakr-tab" data-toggle="tab" href="#wondermakr" role="tab"
-            aria-controls="wondermakr" aria-selected="false">WondrMakr</a>
-        </li>
-        <li class="nav-item">
-          <a class="fm-link" id="parkr-tab" data-toggle="tab" href="#parkr" role="tab" aria-controls="parkr"
-            aria-selected="false">Parkr</a>
-        </li>
-      </ul>
-
-
       <!-- Tab panes -->
       <div class="tab-content fm-tabs-content ml-5">
         <div class="tab-pane fade show active" id="pathway" role="tabpanel" aria-labelledby="pathway-tab">
