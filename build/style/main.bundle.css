@@ -70,6 +70,10 @@
   border-bottom: 12px solid #30a8a2;
 }
 
+html {
+  overflow-anchor: none;
+}
+
 footer {
   background-color: #333333;
 }
@@ -79,7 +83,9 @@ footer {
   font-weight: 600 !important;
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
   background-color: #096f67;
   box-shadow: rgba(0, 0, 0, 0.25) -3px -3px 0px 0px inset;
   color: #ffffff !important;

@@ -13,7 +13,9 @@ $theme-colors: (
   color: $black !important;
   font-weight: 600 !important;
 }
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
   background-color: rgb(9, 111, 103);
   box-shadow: rgba(0, 0, 0, 0.25) -3px -3px 0px 0px inset;
   color: $white !important;

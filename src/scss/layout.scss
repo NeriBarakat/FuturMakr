@@ -61,6 +61,11 @@
     border-bottom: 12px solid $primary-seegreen;
   }
 }
+
+// Body
+html {
+  overflow-anchor: none;
+}
 // Footer
 footer {
   background-color: $jet-gray;

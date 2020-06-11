@@ -21,8 +21,8 @@
         <div class="collapse navbar-collapse" id="mainNav">
           <div class="navbar-nav ml-auto">
             <div class="media bg-very-dark rounded p-3 my-2">
-              <button class="btn mr-3 btn-primary">Request a demo</button>
-              <button class="btn btn-outline-primary">logout</button>
+              <a href="#request-demo" data-smooth="#request-demo" class="btn mr-3 btn-primary ">Request a demo</a>
+              <a class="btn btn-outline-primary">logout</a>
             </div>
           </div>
         </div>
@@ -58,8 +58,10 @@
           shaping industry and
           education today, FuturMakr guides students through a bespoke and in-depth user-journey to develop the habits,
           skills, knowledge, connections and work opportunities needed to succeed in their chosen field. </p>
-        <button class="btn btn-lg btn-primary btn-lg text-left clearfix my-5" type="submit">Request a demo
-          <span class="float-right ml-5"><img class="pl-5" src="images/arrow-right.svg"></span></button>
+        <a href="#request-demo" data-smooth="#request-demo"
+          class="btn btn-lg btn-primary btn-lg text-left clearfix my-5" type="submit">Request a
+          demo
+          <span class="float-right ml-5"><img class="pl-5" src="images/arrow-right.svg"></span></a>
       </div>
     </div>
     <!-- Begin Tabs -->
@@ -264,7 +266,7 @@
       </div>
     </div>
     <!-- Begin request a demo FuturMakr?  -->
-    <div class="mb-3 fm-form">
+    <div id="request-demo" class="mb-3 fm-form ">
       <div class="">
         <div class="row">
           <div class="col-md-12 col-lg-6 gray-1-bg fm-form-ins">
@@ -286,11 +288,18 @@
             <div class="col-md-10 col-lg-7 px-4 mx-auto">
               <form class="form-demo">
                 <p class="my-5 font-weight-normal f-size-32 mono-gray-5-color">Request a demo</p>
-                <div class="form-group mb-4"><label class="mb-3" for="describtion">What describes you best?</label>
-                  <input name="describtion" id="describtion" class="form-control form-control-lg"
-                    placeholder="Please select" required autofocus></div>
+
+                <div class="form-group mb-4">
+                  <label class="mb-3" for="describtion">What describes you best?</label>
+                  <select class="form-control form-control-lg" id="describtion" required>
+                    <option selected>Please select</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
                 <div class="form-group mb-4"><label class="mb-3" for="email">Email address</label> <input name="email"
-                    id="email" class="form-control form-control-lg" placeholder="Email address" required autofocus>
+                    id="email" class="form-control form-control-lg" placeholder="Email address" required>
                 </div>
                 <div class="form-group mb-4">
                   <div class="clearfix mb-2"><label class="float-left d-inline" for="name">First Name</label>
