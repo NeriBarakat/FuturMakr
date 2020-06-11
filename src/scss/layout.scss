@@ -58,9 +58,10 @@
   .fm-tabs-s {
     background-color: $eerie-black;
     a {
+      width: 150px;
       height: 81px;
       padding-top: 16px;
-      padding-right: 0px;
+      padding-right: 30px;
       padding-bottom: 16px;
       padding-left: 24px;
       border-bottom: 8px solid $jet-gray;
