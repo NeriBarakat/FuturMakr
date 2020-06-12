@@ -227,6 +227,63 @@ footer {
   left: 3px;
 }
 
+.dashboard .nav-dashboard .view-icon-ctr {
+  background-color: #4f4f4f;
+  background-image: url(../images/detail-icon.svg);
+  background-repeat: no-repeat;
+  width: 20px;
+  background-position: center;
+  height: 20px;
+}
+.dashboard .nav-dashboard .view-icon-ctr.active {
+  background-image: url(../images/detail-active.svg);
+  border: 1px solid #30a8a2;
+}
+.dashboard .nav-dashboard .view-icon-ctr:active,
+.dashboard .nav-dashboard .view-icon-ctr:focus {
+  background-image: url(../images/detail-active.svg);
+  border: 1px solid #30a8a2;
+}
+.dashboard .card .card-config {
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+.dashboard .card .card-config .card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 2;
+}
+.dashboard .card .card-footer {
+  background-color: transparent;
+}
+.dashboard .card .carousel-indicators li {
+  width: 8px;
+  height: 8px;
+}
+.dashboard .card .carousel-control-prev,
+.dashboard .card .carousel-control-next {
+  bottom: 16px;
+  width: 70%;
+}
+.dashboard #navbarNav .fa-search {
+  color: #828282;
+  z-index: 1;
+}
+.dashboard #navbarNav input {
+  padding-left: 30px;
+}
+.dashboard .breadcrumb {
+  display: inline-flex;
+  background: rgba(51, 51, 51, 0.5);
+}
+.dashboard .breadcrumb-item.active {
+  color: #818a91;
+}
+.dashboard #tns1-mw {
+  background-color: #333333;
+}
+
 /*!
  * Bootstrap v4.5.0 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors

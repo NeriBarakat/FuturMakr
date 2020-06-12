@@ -1,0 +1,64 @@
+.dashboard {
+  .nav-dashboard {
+    .view-icon-ctr {
+      background-color: $mono-gray-2;
+      background-image: url(../assets/images/icons/detail-icon.svg);
+      background-repeat: no-repeat;
+      width: 20px;
+      background-position: center;
+      height: 20px;
+    }
+    .view-icon-ctr.active {
+      background-image: url(../assets/images/icons/detail-active.svg);
+      border: 1px solid #30a8a2;
+    }
+    .view-icon-ctr:active,
+    .view-icon-ctr:focus {
+      background-image: url(../assets/images/icons/detail-active.svg);
+      border: 1px solid #30a8a2;
+    }
+  }
+  .card {
+    .card-config {
+      top: 0;
+      right: 0;
+      z-index: 1;
+      .card-title {
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 2;
+      }
+    }
+    .card-footer {
+      background-color: transparent;
+    }
+    .carousel-indicators li {
+      width: 8px;
+      height: 8px;
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+      bottom: 16px;
+      width: 70%;
+    }
+  }
+  #navbarNav {
+    .fa-search {
+      color: $mono-gray-3;
+      z-index: 1;
+    }
+    input {
+      padding-left: 30px;
+    }
+  }
+  .breadcrumb {
+    display: inline-flex;
+    background: rgba(51, 51, 51, 0.5);
+  }
+  .breadcrumb-item.active {
+    color: $mono-gray-green;
+  }
+  #tns1-mw {
+    background-color: $jet-gray;
+  }
+}

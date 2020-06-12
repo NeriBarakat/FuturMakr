@@ -36,6 +36,24 @@ module.exports = merge(common, {
       chunks: ['main'],
       minify: false,
     }),
+    new HtmlWebpackPlugin({
+      template: 'src/forgotPassword.html',
+      filename: 'forgotPassword.html',
+      chunks: ['main'],
+      minify: false,
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/forgotPasswordConfirmation.html',
+      filename: 'forgotPasswordConfirmation.html',
+      chunks: ['main'],
+      minify: false,
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/dashboard.html',
+      filename: 'dashboard.html',
+      chunks: ['main'],
+      minify: false,
+    }),
   ],
   module: {
     rules: [
