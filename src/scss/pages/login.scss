@@ -1,0 +1,97 @@
+.signin-form-ctr {
+  .loginarea {
+    background-color: $jet-gray;
+    border-bottom: 8px solid $primary-seegreen;
+  }
+
+  .vertical-divider {
+    position: absolute;
+    z-index: 1;
+    top: 15%;
+    left: 50%;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: 50%;
+    line-height: 0;
+    text-align: center;
+    text-transform: uppercase;
+    transform: translateX(-50%);
+    span {
+      border: 5px solid $jet-gray;
+      background-color: $eerie-black;
+    }
+  }
+
+  .vertical-divider:before,
+  .vertical-divider:after {
+    position: absolute;
+    left: 50%;
+    z-index: 9;
+    width: 0;
+    height: calc(100% - 1rem);
+  }
+
+  .row-divided > .vertical-divider {
+    height: calc(50% - 1rem);
+  }
+
+  .vertical-divider:before {
+    top: -100%;
+  }
+
+  .vertical-divider:after {
+    top: auto;
+    bottom: 0;
+  }
+
+  .row-divided {
+    position: relative;
+  }
+
+  .row-divided > [class^='col-'],
+  .row-divided > [class*=' col-'] {
+    padding-left: 30px; /* gutter width (give a little extra room) 2x default */
+    padding-right: 30px; /* gutter width (give a little extra room) 2x default */
+  }
+
+  .social-loginarea {
+    background-color: $nero-black;
+    .social-loginarea-btn {
+      .btn {
+        height: 64px;
+      }
+      .apple-login-btn {
+        background-color: $black;
+        font-family: '-apple-system', 'BlinkMacSystemFont', sans-serif;
+        i {
+          font-size: 22px;
+        }
+      }
+      .facebook-login-btn {
+        background-color: $facebook-color;
+        font-weight: 500;
+        font-size: 16px;
+        i {
+          font-size: 26px;
+        }
+      }
+      .google-login-btn {
+        background-color: $google-color;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+      }
+      .google-logo {
+        background-color: $white;
+        background-image: url('../assets/images/social/logo_google.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 2px;
+        height: 60px;
+        top: 2px;
+        width: 60px;
+        left: 3px;
+      }
+    }
+  }
+}

@@ -139,6 +139,94 @@ footer {
   background-color: transparent;
 }
 
+.signin-form-ctr .loginarea {
+  background-color: #333333;
+  border-bottom: 8px solid #30a8a2;
+}
+.signin-form-ctr .vertical-divider {
+  position: absolute;
+  z-index: 1;
+  top: 15%;
+  left: 50%;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: 50%;
+  line-height: 0;
+  text-align: center;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+}
+.signin-form-ctr .vertical-divider span {
+  border: 5px solid #333333;
+  background-color: #232323;
+}
+.signin-form-ctr .vertical-divider:before,
+.signin-form-ctr .vertical-divider:after {
+  position: absolute;
+  left: 50%;
+  z-index: 9;
+  width: 0;
+  height: calc(100% - 1rem);
+}
+.signin-form-ctr .row-divided > .vertical-divider {
+  height: calc(50% - 1rem);
+}
+.signin-form-ctr .vertical-divider:before {
+  top: -100%;
+}
+.signin-form-ctr .vertical-divider:after {
+  top: auto;
+  bottom: 0;
+}
+.signin-form-ctr .row-divided {
+  position: relative;
+}
+.signin-form-ctr .row-divided > [class^=col-],
+.signin-form-ctr .row-divided > [class*=" col-"] {
+  padding-left: 30px;
+  /* gutter width (give a little extra room) 2x default */
+  padding-right: 30px;
+  /* gutter width (give a little extra room) 2x default */
+}
+.signin-form-ctr .social-loginarea {
+  background-color: #292929;
+}
+.signin-form-ctr .social-loginarea .social-loginarea-btn .btn {
+  height: 64px;
+}
+.signin-form-ctr .social-loginarea .social-loginarea-btn .apple-login-btn {
+  background-color: #000000;
+  font-family: "-apple-system", "BlinkMacSystemFont", sans-serif;
+}
+.signin-form-ctr .social-loginarea .social-loginarea-btn .apple-login-btn i {
+  font-size: 22px;
+}
+.signin-form-ctr .social-loginarea .social-loginarea-btn .facebook-login-btn {
+  background-color: #4267b2;
+  font-weight: 500;
+  font-size: 16px;
+}
+.signin-form-ctr .social-loginarea .social-loginarea-btn .facebook-login-btn i {
+  font-size: 26px;
+}
+.signin-form-ctr .social-loginarea .social-loginarea-btn .google-login-btn {
+  background-color: #4086f4;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+.signin-form-ctr .social-loginarea .social-loginarea-btn .google-logo {
+  background-color: #ffffff;
+  background-image: url(../images/logo_google.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 2px;
+  height: 60px;
+  top: 2px;
+  width: 60px;
+  left: 3px;
+}
+
 /*!
  * Bootstrap v4.5.0 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors

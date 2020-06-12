@@ -19,361 +19,74 @@
     gtag('config', 'UA-169252299-1');
   </script>
   <!-- End -->
+  <!-- Meta -->
+  <meta name="description" content="End-to-end
+holistic talent development system">
+  <meta name="development" content="treenodes.com">
+  <meta name="author" content="FuturMakr">
 
   <title>FuturMakr - Login</title>
 </head>
 
-<body class="landing">
+<body class="user-auth">
   <!-- Begin Header -->
-  <header class="nav-bg">
-    <nav class="navbar navbar-dark mb-3 fixed-top nav-bg">
+  <header class="nav-bg py-5">
+    <nav class="navbar navbar-dark mb-3 fixed-top nav-bg py-5">
       <div class="container-fluid">
-        <div class="navbar-nav ml-auto d-block d-md-none d-sm-none">
-          <div class="media bg-very-dark rounded p-3 my-2">
-            <a href="#request-demo" data-smooth="#request-demo" class="btn mr-3 btn-primary f-size-14">Request a
-              demo</a>
-            <a class="btn btn-outline-primary f-size-14">Login</a>
-          </div>
-        </div>
         <a class="navbar-brand" href="./index.html"><img src="assets/images/logos/futurmakr-logo.svg" class="img-fluid"
             alt="FuturMakrStudio"></a>
-
-        <div class="navbar-nav ml-auto d-none d-sm-block">
-          <div class="media bg-very-dark rounded p-3 my-2">
-            <a href="#request-demo" data-smooth="#request-demo" class="btn mr-3 btn-primary ">Request a demo</a>
-            <a class="btn btn-outline-primary" href="/login.html">Login</a>
-          </div>
-        </div>
-
       </div>
     </nav>
   </header>
   <!-- End Header -->
   <!-- Begin main -->
-  <main role="main" class="mb-4 ">
+  <main role="main" class="my-5 ">
     <!-- Begin Hero -->
-    <div class="text-center">
-      <div class="col-md-10 pt-3 col-lg-9 mx-auto">
-        <h1 class="display-3 text-uppercase my-5">Cutting-edge<br>education for
-          <br>self-actualisation
-        </h1>
-        <img src="assets/images/landing/Landing_iPad_Hero.svg" class="img-fluid  mt-5" alt="FuturMakrStudio">
-      </div>
-    </div>
 
-    <div class="text-center position-relative pb-5 ">
-      <img class="img-fluid position-absolute lime-outline-hexa d-none d-md-block "
-        src="assets/images/hexa-shapes/lime-outline-hexa-l.svg" alt="">
-      <img class="img-fluid position-absolute g-outline-hexa-landing d-none d-lg-block "
-        src="assets/images/hexa-shapes/g-outline-hexa-landing.svg" alt="">
-      <div class="col-md-10 col-lg-9 mx-auto">
-        <p class="f-size-32 pb-4">
-          FuturMakr is the only end-to-end, holistic,<br> talent development system on
-          the
-          market.</p>
-        <p class="mono-gray-4-color pb-4 f-size-24">Powered by the latest AI technology and trained by some of the
-          foremost
-          figures
-          shaping industry and
-          education today, FuturMakr guides students through a bespoke and in-depth user-journey to develop the habits,
-          skills, knowledge, connections and work opportunities needed to succeed in their chosen field. </p>
-
-
-        <a href="#request-demo" data-smooth="#request-demo"
-          class="btn btn-lg btn-primary text-left clearfix my-4">Request a
-          demo
-          <span class="float-right ml-5 d-none d-md-block"><img class="pl-5 "
-              src="assets/images/icons/arrow-right.svg"></span></a>
-      </div>
-    </div>
-    <!-- Begin Tabs -->
-    <div class="ml-5 ml-5 my-5 fm-customize-tabs ">
-      <!-- Nav tabs -->
-      <ul class="nav ml-5 fm-tabs" role="tablist">
-        <li class="nav-item fm-item">
-          <a class=" fm-link active" id="pathway-tab" data-toggle="tab" href="#pathway" role="tab"
-            aria-controls="pathway" aria-selected="true">Pathway</a>
-        </li>
-        <li class="nav-item">
-          <a class="fm-link " id="flow-tab" data-toggle="tab" href="#flow" role="tab" aria-controls="flow"
-            aria-selected="false">Flow</a>
-        </li>
-        <li class="nav-item">
-          <a class="fm-link" id="wondermakr-tab" data-toggle="tab" href="#wondermakr" role="tab"
-            aria-controls="wondermakr" aria-selected="false">WondrMakr</a>
-        </li>
-        <li class="nav-item">
-          <a class="fm-link" id="parkr-tab" data-toggle="tab" href="#parkr" role="tab" aria-controls="parkr"
-            aria-selected="false">Parkr</a>
-        </li>
-      </ul>
-      <!-- Tab panes -->
-      <div class="tab-content fm-tabs-content ml-5">
-        <div class="tab-pane fade show active" id="pathway" role="tabpanel" aria-labelledby="pathway-tab">
-          <div class='pt-5'>
-            <div class="row">
-              <div class="col-md-12 col-lg-5 pt-5">
-                <div class="text-center">
-                  <div class="col-md-10 col-lg-9 mx-auto">
-                    <p class="f-size-32 pb-4 text-left">Helps students find their ‘path with heart’
-                    </p>
-                    <p class="mono-gray-4-color pb-4 l-h-25 text-left">
-                      Pathway dynamically matches current industry data with the interests and attributes of each
-                      student, charting the most effective and efficient route to their desired employment, while
-                      constantly keeping institutions market aligned.
-                    </p>
-                  </div>
-                </div>
+    <div class="signin-form-ctr pt-5 mt-5">
+      <div class="d-md-flex h-md-100 row row-divided">
+        <div class="col-md-6 p-0 h-md-100 loginarea position-relative">
+          <div class="d-md-flex  h-md-100 p-5 justify-content-center">
+            <form class="form-signin">
+              <h3 class="my-5 font-weight-normal">Log in to your account</h3>
+              <div class="form-group mb-4"><label class="mb-3" for="email-username">Email / Username</label> <input
+                  name="email-username" id="email-username" class="form-control form-control-lg" placeholder="Username"
+                  required autofocus></div>
+              <div class="form-group mb-4">
+                <div class="clearfix mb-2"><label class="float-left d-inline" for="login-password">Password</label>
+                </div><input type="password" id="login-password" name="login-password"
+                  class="form-control form-control-lg" placeholder="Password" required>
+              </div><button class="btn btn-lg btn-primary  btn-block text-left clearfix mb-4" type="submit">Log in
+                <span class="float-right"><img class="mt-2" src="assets/images/icons/arrow-right.svg"></span></button>
+              <div><a class="d-block mb-3" href="/forgotPassword.html">Forgotten password</a> <a class="d-block mb-4"
+                  href="#">Resend email confirmation</a>
+                <p class="d-block mb-4"><span class="mr-1">Don’t have an account?</span><a href="registration.html">Sign
+                    up</a></p>
               </div>
-              <div class="col-md-12 col-lg-7 pt-5 pl-5">
-                <img src="assets/images/landing/Pathway@2x.png" class="img-fluid" alt="">
+            </form>
+          </div>
+        </div>
+        <div class="vertical-divider d-none d-md-block"><span class="rounded-circle p-3">or</span></div>
+        <div class="col-md-6 p-0 h-md-100 social-loginarea">
+          <div class="text-white d-md-flex align-items-center h-100 p-5 text-center justify-content-center">
+            <div class="pb-5">
+              <h5 class="mb-5 font-weight-light">Sign in with a third-party service</h5>
+              <div class="py-5 social-loginarea-btn">
+                <button type="button"
+                  class="btn text-left btn-block border-0 mb-5 google-login-btn btn-lg position-relative"><span
+                    class="google-logo position-absolute"></span><span class="ml-5 pl-3">sign
+                    in
+                    with Google</span></button>
+                <button type="button"
+                  class="btn btn-block text-left mb-5 facebook-login-btn border-0 btn-lg text-bold"><i
+                    class="fab fa-facebook mr-4"></i>Continue with Facebook</button>
+                <button type="button" class="btn btn-block text-left mb-5 border-0 apple-login-btn btn-dark btn-lg"><i
+                    class="fab fa-apple mr-4"></i>Sign
+                  in with Apple</button>
               </div>
             </div>
           </div>
         </div>
-        <div class="tab-pane fade" id="flow" role="tabpanel" aria-labelledby="profile-tab">
-          <div class='pt-5'>
-            <div class="row">
-              <div class="col-md-12 col-lg-5 pt-5">
-                <div class="text-center">
-                  <div class="col-md-10 col-lg-9 mx-auto">
-                    <p class="f-size-32 pb-4  text-left">Balancing ability with challenge for maximum engagement
-                    </p>
-                    <p class="mono-gray-4-color pb-4 l-h-25  text-left">
-                      How students feel as they learn matters. Real-time data analysis keeps students in the learning
-                      sweet spot, progressing at the optimal pace for them to realise their potential. FLOW nurtures
-                      both joy in the now and long-term dedication to unlock sustainable and meaningful growth.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12 col-lg-7 pt-5 pl-5">
-                <img src="assets/images/landing/Flow@2x.png" class="img-fluid" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="tab-pane fade" id="wondermakr" role="tabpanel" aria-labelledby="contact-tab">
-          <div class='pt-5'>
-            <div class="row">
-              <div class="col-md-12 col-lg-5 pt-5">
-                <div class="text-center">
-                  <div class="col-md-10 col-lg-9 mx-auto">
-                    <p class="f-size-32 pb-4  text-left">Community made easy
-                    </p>
-                    <p class="mono-gray-4-color pb-4 l-h-25  text-left">
-                      Networking features enable students to build more effective teams, make valuable industry
-                      connections and find relevant career opportunities.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12 col-lg-7  pl-5">
-                <img src="assets/images/landing/WondrMakr@2x.png" class="img-fluid" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="tab-pane fade" id="parkr" role="tabpanel" aria-labelledby="contact-tab">
-          <div class='pt-5'>
-            <div class="row">
-              <div class="col-md-12 col-lg-5 pt-5">
-                <div class="text-center">
-                  <div class="col-md-10 col-lg-9 mx-auto">
-                    <p class="f-size-32 pb-4  text-left">Meet Parkr
-                    </p>
-                    <p class="mono-gray-4-color pb-4 l-h-25  text-left">
-                      Available 24/7, FuturMakr’s personal AI mentor is a relatable and responsive expert, on hand at
-                      every step of a student’s learning for enhanced insight and guidance.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12 col-lg-7  pl-5">
-                <img src="assets/images/landing/Parkr@2x.png" class="img-fluid" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Begin unparalleled student experience -->
-    <div class="position-relative py-5">
-      <div class="text-center">
-        <div class="col-md-8 col-lg-8 mx-auto">
-          <img class="img-fluid d-none d-md-block" src="assets/images/landing/FuturMakrExperience.svg"
-            alt="futurMakr experience">
-          <img class="img-fluid d-none d-block d-md-none" src="assets/images/landing/FuturMakrExperienceSmall.svg"
-            alt="futurMakr experience">
-          <p class="mono-gray-4-color px-5 pt-5 f-size-24">Only through the dynamic interaction between all three
-            entities
-            can
-            students achieve both the formative and summative development they need to thrive.</p>
-        </div>
-      </div>
-      <img class="img-fluid position-absolute Orange-hexa d-none d-lg-block "
-        src="assets/images/hexa-shapes/Orange-hexa.svg" alt="">
-    </div>
-    <!-- Begin Why FuturMakr?  -->
-    <div class="text-center mb-3">
-      <div class="col-md-10 col-lg-9 mx-auto">
-        <h1 class="display-3 text-uppercase my-5">Why FuturMakr?
-        </h1>
-        <div class="row">
-          <div class="card-deck mb-3 text-left">
-            <div class="col-md-12 col-lg-4">
-              <div class="card mb-4 shadow-sm">
-                <div class="card-header">
-                  <img src="assets/images/landing/why-futurmakr-1.svg" class="img-fluid" alt="why futurmakr">
-                </div>
-                <div class="card-body">
-                  <p class="card-title pricing-card-title f-size-24">Attract and retain students with an unparalleled
-                    learning
-                    experience</p>
-                  <ul class="list-unstyled mt-3 mb-4">
-                    <li class="my-3">Tailored learning pathways that feel good and unlock potential</li>
-                    <li class="my-3">Demonstrably better ROI for students’ time, energy and fees</li>
-                    <li class="my-3">Connections that allow students to build a relevant network </li>
-                    <li class="my-3">Accessible and engaging student support system with no individual left behind</li>
-                    <li class="my-3">Superior employability and job opportunities</li>
-                  </ul>
-
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12 col-lg-4">
-              <div class="card mb-4 shadow-sm">
-                <div class="card-header">
-                  <img src="assets/images/landing/why-futurmakr-2.svg" class="img-fluid" alt="why futurmakr 2">
-                </div>
-                <div class="card-body">
-                  <p class="card-title pricing-card-title f-size-24">Futureproof for an ever-evolving market</p>
-                  <ul class="list-unstyled mt-3 mb-4">
-                    <li class="my-3">Centralised, customisable system for streamlined workflows - less admin, more time
-                      for
-                      teaching</li>
-                    <li class="my-3">Empowers and motivates staff with an enhanced experience for tutors and academic
-                      support teams </li>
-                    <li class="my-3">Powerful, user-friendly data insights to direct resources where they’ll have the
-                      most
-                      impact</li>
-                    <li class="my-3">Secure system fully compliant with GDPR</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12 col-lg-4">
-              <div class="card mb-4 shadow-sm">
-                <div class="card-header">
-                  <img src="assets/images/landing/why-futurmakr-3.svg" class="img-fluid" alt="why futurmakr 3">
-                </div>
-                <div class="card-body">
-                  <p class="card-title pricing-card-title f-size-24">Improve business efficiencies and staff well-being
-                  </p>
-                  <ul class="list-unstyled mt-3 mb-4">
-                    <li class="my-3">Remain truly industry relevant with seamless integration of real-world data and
-                      links
-                      to industry
-                      leaders</li>
-                    <li class="my-3">Increased marketability</li>
-                    <li class="my-3">Cutting-edge courses and job opportunities foster wealth generation in the
-                      community
-                    </li>
-                    <li class="my-3">Actionable insights for informed and responsive decision making </li>
-                    <li class="my-3">Benchmark your progress against others nationally</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Begin request a demo FuturMakr?  -->
-    <div id="request-demo" class="mb-3 fm-form ">
-      <div class="">
-        <div class="row">
-          <div class="col-md-12 col-lg-6 gray-1-bg fm-form-ins">
-
-            <div class="col-md-10 col-lg-6 px-4 mx-auto">
-              <p class="my-5 font-weight-normal d-block f-size-32 mono-gray-5-color">Ready to unleash the creative power
-                of FuturMakr
-              </p>
-              <p class="my-5 d-block f-size-24 mono-gray-4-color ">any student <br>any dream <br>a path made possible
-                with
-                FuturMakr</p>
-            </div>
-            <img src="assets/images/hexa-shapes/lime-outline-hexa-l.svg"
-              class="img-fluid mb-5 float-left d-md-block d-none" alt="">
-            <img src="assets/images/hexa-shapes/g-outline-hexa-landing.svg"
-              class="img-fluid mb-5 d-md-block d-none float-right" alt="" style="margin-right: -14px;">
-          </div>
-          <div class="col-md-12 col-lg-6 nero-black-bg fm-form-fields">
-            <div class="col-md-10 col-lg-7 px-4 mx-auto">
-              <form class="form-demo">
-                <p class="my-5 font-weight-normal f-size-32 mono-gray-5-color">Request a demo</p>
-
-                <div class="form-group mb-4">
-                  <label class="mb-3" for="describtion">What describes you best?</label>
-                  <select class="form-control form-control-lg" id="describtion" required>
-                    <option selected>Please select</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                </div>
-                <div class="form-group mb-4"><label class="mb-3" for="email">Email address</label> <input name="email"
-                    id="email" class="form-control form-control-lg" placeholder="Email address" required>
-                </div>
-                <div class="form-group mb-4">
-                  <div class="clearfix mb-2"><label class="float-left d-inline" for="name">First Name</label>
-                  </div><input type="text" id="name" name="name" class="form-control form-control-lg"
-                    placeholder="First Name" required>
-                </div>
-                <div class="form-group mb-4">
-                  <div class="clearfix mb-2"><label class="float-left d-inline" for="last-name">Last name</label>
-                  </div><input type="text" id="last-name" name="last-name" class="form-control form-control-lg"
-                    placeholder="Last Name" required>
-                </div>
-                <div class="form-group mb-4">
-                  <div class="clearfix mb-2"><label class="float-left d-inline" for="company">Company /
-                      Institution</label>
-                  </div><input type="text" id="company" name="company" class="form-control form-control-lg"
-                    placeholder="Company / Institution" required>
-                </div>
-                <button class="btn btn-lg btn-primary my-5 btn-block text-left clearfix mb-4" type="submit">Submit
-                  <span class="float-right"><img class="mt-2" src="assets/images/icons/arrow-right.svg"></span></button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End request a demo FuturMakr?  -->
-    <!-- Begin ShareTheWrd  -->
-    <div class="">
-      <div class="col-md-10 col-lg-9 mx-auto">
-        <h1 class="display-5 font-weight-normal l-h-48 my-5">FuturMakr CIC is excited to
-          <br>#ShareTheWrd
-        </h1>
-        <p class="mono-gray-5-color l-h-36 pb-5">At #ShareTheWrd, <strong>we invite you to donate knowledge, not
-            money</strong>.
-          By
-          sharing microblocks of knowledge, <strong>collectively we can inform and inspire young minds</strong>,
-          create
-          a valuable <strong>knowledge bank that is accessible to ALL</strong>, and <strong>raise enough money to
-            give
-            10,000 young people free vocational arts training</strong> in the next 10 years.</p>
-        <h1 class="display-5 font-weight-normal l-h-48 my-5">How does it work?
-        </h1>
-        <div class="row">
-          <img src="assets/images/landing/FuturMakrHow.svg" alt="How does it work?"
-            class="img-fluid mx-auto d-none d-md-block">
-          <img src="assets/images/landing/futurmakr-how-small.svg" alt="How does it work?"
-            class="img-fluid mx-auto d-none d-block d-md-none">
-        </div>
-        <h1 class="display-5 font-weight-normal l-h-48 my-5">We invite you to <a href="#">#ShareTheWrd</a>
-        </h1>
       </div>
     </div>
 
