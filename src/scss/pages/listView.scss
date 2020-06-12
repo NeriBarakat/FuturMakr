@@ -1,0 +1,50 @@
+.list-view-ctr {
+  .list-nav {
+    border-bottom: 2px solid transparent;
+    .list {
+      .list-item {
+        background-color: $mono-gray-1;
+        color: $mono-gray-4;
+        border-bottom: 5px solid $mono-gray-1;
+        cursor: pointer;
+        border-right: 2px solid $eerie-black;
+        a {
+          color: $mono-gray-4;
+          text-decoration: none;
+        }
+      }
+      .list-item.active {
+        background-color: $mono-gray-2;
+        border-bottom: 5px solid $primary-seegreen;
+        a {
+          color: $white;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  .second-nav {
+    .list-inline {
+      background-color: $jet-gray;
+    }
+    .list-inline-item {
+      border-right: 2px solid $eerie-black;
+      border-bottom: 5px solid $mono-gray-1;
+    }
+    .list-inline-item.active {
+      border-bottom: 5px solid $primary-seegreen;
+    }
+    .list-inline-item a {
+      color: $mono-gray-5;
+    }
+    .list-inline-item:not(:last-child) {
+      margin-right: 0;
+    }
+  }
+  .list-table {
+    .table {
+      background-color: $mono-gray-1;
+      color: $mono-gray-3;
+    }
+  }
+}

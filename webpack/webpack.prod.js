@@ -54,6 +54,12 @@ module.exports = merge(common, {
       chunks: ['main'],
       minify: false,
     }),
+    new HtmlWebpackPlugin({
+      template: 'src/courses.html',
+      filename: 'courses.html',
+      chunks: ['main'],
+      minify: false,
+    }),
   ],
   module: {
     rules: [
