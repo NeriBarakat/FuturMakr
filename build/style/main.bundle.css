@@ -30,12 +30,20 @@
   line-height: 48px;
 }
 
-.mono-gray-4-color {
+.txt-gray-4 {
   color: #bdbdbd;
 }
 
-.mono-gray-5-color {
+.txt-gray-5 {
   color: #e0e0e0;
+}
+
+.txt-green {
+  color: #30a8a2;
+}
+
+.txt-danger {
+  color: #a94442;
 }
 
 .gray-1-bg {

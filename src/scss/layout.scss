@@ -18,12 +18,19 @@
   line-height: 48px;
 }
 // Font Color
-.mono-gray-4-color {
+.txt-gray-4 {
   color: $mono-gray-4; //bdbdbd
 }
-.mono-gray-5-color {
+.txt-gray-5 {
   color: $mono-gray-5; //e0e0e0
 }
+.txt-green {
+  color: $primary-seegreen;
+}
+.txt-danger {
+  color: #a94442;
+}
+
 // background
 .gray-1-bg {
   background-color: $jet-gray;

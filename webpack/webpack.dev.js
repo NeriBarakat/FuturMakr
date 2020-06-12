@@ -18,6 +18,11 @@ module.exports = merge(common, {
       template: 'src/index.html',
       chunks: ['main'],
     }),
+    new HtmlWebpackPlugin({
+      template: 'src/login.html',
+      filename: 'login.html',
+      chunks: ['main'],
+    }),
   ],
   module: {
     rules: [

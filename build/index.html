@@ -41,7 +41,7 @@
         <div class="navbar-nav ml-auto d-none d-sm-block">
           <div class="media bg-very-dark rounded p-3 my-2">
             <a href="#request-demo" data-smooth="#request-demo" class="btn mr-3 btn-primary ">Request a demo</a>
-            <a class="btn btn-outline-primary">logout</a>
+            <a class="btn btn-outline-primary" href="/login.html">Login</a>
           </div>
         </div>
 
@@ -71,7 +71,7 @@
           FuturMakr is the only end-to-end, holistic,<br> talent development system on
           the
           market.</p>
-        <p class="mono-gray-4-color pb-4 f-size-24">Powered by the latest AI technology and trained by some of the
+        <p class="txt-gray-4 pb-4 f-size-24">Powered by the latest AI technology and trained by some of the
           foremost
           figures
           shaping industry and
@@ -117,7 +117,7 @@
                   <div class="col-md-10 col-lg-9 mx-auto">
                     <p class="f-size-32 pb-4 text-left">Helps students find their ‘path with heart’
                     </p>
-                    <p class="mono-gray-4-color pb-4 l-h-25 text-left">
+                    <p class="txt-gray-4 pb-4 l-h-25 text-left">
                       Pathway dynamically matches current industry data with the interests and attributes of each
                       student, charting the most effective and efficient route to their desired employment, while
                       constantly keeping institutions market aligned.
@@ -139,7 +139,7 @@
                   <div class="col-md-10 col-lg-9 mx-auto">
                     <p class="f-size-32 pb-4  text-left">Balancing ability with challenge for maximum engagement
                     </p>
-                    <p class="mono-gray-4-color pb-4 l-h-25  text-left">
+                    <p class="txt-gray-4 pb-4 l-h-25  text-left">
                       How students feel as they learn matters. Real-time data analysis keeps students in the learning
                       sweet spot, progressing at the optimal pace for them to realise their potential. FLOW nurtures
                       both joy in the now and long-term dedication to unlock sustainable and meaningful growth.
@@ -161,7 +161,7 @@
                   <div class="col-md-10 col-lg-9 mx-auto">
                     <p class="f-size-32 pb-4  text-left">Community made easy
                     </p>
-                    <p class="mono-gray-4-color pb-4 l-h-25  text-left">
+                    <p class="txt-gray-4 pb-4 l-h-25  text-left">
                       Networking features enable students to build more effective teams, make valuable industry
                       connections and find relevant career opportunities.
                     </p>
@@ -182,7 +182,7 @@
                   <div class="col-md-10 col-lg-9 mx-auto">
                     <p class="f-size-32 pb-4  text-left">Meet Parkr
                     </p>
-                    <p class="mono-gray-4-color pb-4 l-h-25  text-left">
+                    <p class="txt-gray-4 pb-4 l-h-25  text-left">
                       Available 24/7, FuturMakr’s personal AI mentor is a relatable and responsive expert, on hand at
                       every step of a student’s learning for enhanced insight and guidance.
                     </p>
@@ -205,7 +205,7 @@
             alt="futurMakr experience">
           <img class="img-fluid d-none d-block d-md-none" src="images/FuturMakrExperienceSmall.svg"
             alt="futurMakr experience">
-          <p class="mono-gray-4-color px-5 pt-5 f-size-24">Only through the dynamic interaction between all three
+          <p class="txt-gray-4 px-5 pt-5 f-size-24">Only through the dynamic interaction between all three
             entities
             can
             students achieve both the formative and summative development they need to thrive.</p>
@@ -296,10 +296,10 @@
           <div class="col-md-12 col-lg-6 gray-1-bg fm-form-ins">
 
             <div class="col-md-10 col-lg-6 px-4 mx-auto">
-              <p class="my-5 font-weight-normal d-block f-size-32 mono-gray-5-color">Ready to unleash the creative power
+              <p class="my-5 font-weight-normal d-block f-size-32 txt-gray-5">Ready to unleash the creative power
                 of FuturMakr
               </p>
-              <p class="my-5 d-block f-size-24 mono-gray-4-color ">any student <br>any dream <br>a path made possible
+              <p class="my-5 d-block f-size-24 txt-gray-4">any student <br>any dream <br>a path made possible
                 with
                 FuturMakr</p>
             </div>
@@ -310,10 +310,13 @@
           </div>
           <div class="col-md-12 col-lg-6 nero-black-bg fm-form-fields">
             <div class="col-md-10 col-lg-7 px-4 mx-auto">
-              <form class="form-demo">
-                <p class="my-5 font-weight-normal f-size-32 mono-gray-5-color">Request a demo</p>
+              <form class="form-demo was-validated">
+                <p class="my-5 font-weight-normal f-size-32 txt-gray-5">Request a demo</p>
 
                 <div class="form-group mb-4">
+                  <small id="" class="form-text float-right txt-green">
+                    Required
+                  </small>
                   <label class="mb-3" for="describtion">What describes you best?</label>
                   <select class="form-control form-control-lg" id="describtion" required>
                     <option selected>Please select</option>
@@ -321,11 +324,21 @@
                     <option value="2">Two</option>
                     <option value="3">Three</option>
                   </select>
+
                 </div>
-                <div class="form-group mb-4"><label class="mb-3" for="email">Email address</label> <input name="email"
-                    id="email" class="form-control form-control-lg" placeholder="Email address" required>
+
+                <div class="form-group mb-4">
+                  <small id="" class="form-text float-right txt-green">
+                    Required
+                  </small>
+                  <label class="mb-3" for="email">Email address</label> <input name="email" id="email"
+                    class="form-control form-control-lg" placeholder="Email address" required>
+                  <div class="invalid-feedback txt-danger">Example invalid feedback text</div>
                 </div>
                 <div class="form-group mb-4">
+                  <small id="" class="form-text float-right txt-green">
+                    Required
+                  </small>
                   <div class="clearfix mb-2"><label class="float-left d-inline" for="name">First Name</label>
                   </div><input type="text" id="name" name="name" class="form-control form-control-lg"
                     placeholder="First Name" required>
@@ -333,13 +346,13 @@
                 <div class="form-group mb-4">
                   <div class="clearfix mb-2"><label class="float-left d-inline" for="last-name">Last name</label>
                   </div><input type="text" id="last-name" name="last-name" class="form-control form-control-lg"
-                    placeholder="Last Name" required>
+                    placeholder="Last Name">
                 </div>
                 <div class="form-group mb-4">
                   <div class="clearfix mb-2"><label class="float-left d-inline" for="company">Company /
                       Institution</label>
                   </div><input type="text" id="company" name="company" class="form-control form-control-lg"
-                    placeholder="Company / Institution" required>
+                    placeholder="Company / Institution">
                 </div>
                 <button class="btn btn-lg btn-primary my-5 btn-block text-left clearfix mb-4" type="submit">Submit
                   <span class="float-right"><img class="mt-2" src="images/arrow-right.svg"></span></button>
@@ -356,7 +369,7 @@
         <h1 class="display-5 font-weight-normal l-h-48 my-5">FuturMakr CIC is excited to
           <br>#ShareTheWrd
         </h1>
-        <p class="mono-gray-5-color l-h-36 pb-5">At #ShareTheWrd, <strong>we invite you to donate knowledge, not
+        <p class="txt-gray-5 l-h-36 pb-5">At #ShareTheWrd, <strong>we invite you to donate knowledge, not
             money</strong>.
           By
           sharing microblocks of knowledge, <strong>collectively we can inform and inspire young minds</strong>,
@@ -383,7 +396,7 @@
     <div class="container-gluid">
       <a class=" w-100 d-block mt-4 mb-5" href="#"><img src="images/futurmakr-logo.svg" class="img-fluid"
           alt="FuturMakr Studio"></a>
-      <div class="pb-3 w-100 text-right"> <span class="p-3 mb-5 mono-gray-4-color">© 2020 WONDRMAKR GROUP LTD. ALL
+      <div class="pb-3 w-100 text-right"> <span class="p-3 mb-5 txt-gray-5">© 2020 WONDRMAKR GROUP LTD. ALL
           RIGHTS
           RESERVED.</span> </div>
       </nav>
