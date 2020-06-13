@@ -29,16 +29,11 @@
   <style>
     /* Button used to open the chat parkr - fixed at the bottom of the page */
     .open-button {
-      background-color: #555;
-      color: white;
-      padding: 16px 20px;
-      border: none;
       cursor: pointer;
-      opacity: 0.8;
       position: fixed;
-      bottom: 23px;
-      right: 28px;
-      width: 280px;
+      bottom: 0px;
+      right: 0px;
+      width: 130px;
     }
 
     /* The popup chat - hidden by default */
@@ -92,6 +87,17 @@ holistic talent development system">
 </head>
 
 <body class="landing">
+
+  <!-- Parkr Button-->
+  <img class="open-button" onclick="openParkr()" src="assets/images/logos/Parker-quick-pulse-256px-audio.gif"
+    alt="Parkr">
+  <div class="chat-popup" id="parkr">
+    <div class="parkr-container">
+      <div id="webchat" role="main"></div>
+      <button type="button" class="btn cancel mt-4" onclick="closeParkr()">Close</button>
+    </div>
+  </div>
+
   <!-- Begin Header -->
   <header class="nav-bg">
     <nav class="navbar navbar-dark mb-3 fixed-top nav-bg">
@@ -459,18 +465,6 @@ holistic talent development system">
       </div>
     </div>
 
-    <!-- Parkr Button-->
-
-    <button class="open-button" onclick="openParkr()">Parkr</button>
-
-    <div class="chat-popup" id="parkr">
-      <div class="parkr-container">
-        <h1>Parkr</h1>
-        <div id="webchat" role="main"></div>
-        <button type="button" class="btn cancel mt-4" onclick="closeParkr()">Close</button>
-      </div>
-    </div>
-
   </main>
   <!-- End main ctr-->
   <footer class="footer p-5">
@@ -492,7 +486,7 @@ holistic talent development system">
   <script>
     const styleOptions = {
       botAvatarImage:
-        'https://docs.microsoft.com/en-us/azure/bot-service/v4sdk/media/logo_bot.svg?view=azure-bot-service-4.0',
+        'http://localhost:8080/images/Parker-quick-pulse-256px-audio.gif',
       botAvatarInitials: 'BF',
       userAvatarImage: 'https://scontent.flhr4-2.fna.fbcdn.net/v/t1.0-1/p160x160/21369527_728926873980716_2007577164610462400_n.jpg?_nc_cat=111&_nc_sid=dbb9e7&_nc_eui2=AeGb7dys_eFpqcs2b1QUhs26tUYfzn_2P-K1Rh_Of_Y_4q95ycHVLMAT-_Y2-p6n3gcifU7R6W3ugU9h6Pank-hg&_nc_ohc=_QOFNQuUe44AX_KusLr&_nc_ht=scontent.flhr4-2.fna&_nc_tp=6&oh=a10f3eb42374fd5dcf412a7afe43759c&oe=5F02BD80',
       userAvatarInitials: 'NB',
