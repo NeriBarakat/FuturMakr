@@ -43,6 +43,11 @@ module.exports = merge(common, {
       filename: 'courses.html',
       chunks: ['main'],
     }),
+    new HtmlWebpackPlugin({
+      template: 'src/charts.html',
+      filename: 'charts.html',
+      chunks: ['main'],
+    }),
   ],
   module: {
     rules: [

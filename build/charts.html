@@ -1,0 +1,168 @@
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Font tag Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome tag -->
+  <script src="https://kit.fontawesome.com/baf5fd4609.js" crossorigin="anonymous"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169252299-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-169252299-1');
+  </script>
+  <!-- End -->
+  <!-- Meta -->
+  <meta name="description" content="End-to-end
+  holistic talent development system">
+  <meta name="development" content="treenodes.com">
+  <meta name="author" content="FuturMakr">
+  <title>FuturMakr - Dashboard</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+
+    #chartdiv {
+      width: 95%;
+      height: 500px;
+      padding: 10px;
+    }
+  </style>
+<link href="style/main.bundle.css" rel="stylesheet"></head>
+
+<body class="">
+  <!-- Begin Header -->
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark mx-xs-4 mx-lg-5 my-4"> <a class=navbar-brand href=#> <img
+          src="images/futurmakr-logo.svg" class="img-fluid" alt="FuturMakrStudio"> </a> <button
+        class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenuNav"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
+          class=navbar-toggler-icon></span> </button>
+      <div class="collapse navbar-collapse" id=mainMenuNav>
+        <div class="navbar-nav ml-auto">
+          <div class="media bg-very-dark rounded p-3 my-2"><img class="avatar rounded-circle border border-primary mr-3"
+              src="images/avatar1.jpg" alt="avatar">
+            <div class="media-body mr-5">
+              <h5 class="mt-0 text-white">Marilyn Geidt</h5>Job title
+            </div>
+            <div class=my-auto><button class="btn btn-outline-primary my-auto">logout</button></div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- End page Header -->
+
+  <!-- Begin page content -->
+  <main role="main" class="dashboard mb-4">
+
+    <div class="px-xs-2 mx-md-4 mx-lg-5 mb-5">
+      <nav class="navbar navbar-expand-lg navbar-dark p-0 nav-dashboard" aria-label="breadcrumb">
+        <div class="">
+          <a class="view-icon-ctr py-3 mr-4 rounded px-4" href="courses.html"></a>
+
+          <ol class="breadcrumb ">
+            <li class="breadcrumb-item active">Dashboard</li>
+          </ol>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-search p-2"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <form class="form-inline ml-auto mt-2 position-relative"><i class="fas fa-search p-2 position-absolute"
+              aria-hidden="true"></i><input class="form-control col-sm-12" placeholder="Search"></form>
+        </div>
+      </nav>
+    </div>
+    <div class="mx-md-4 mx-lg-5 mb-5">
+      <div class="col-12">
+        <div class="row">
+          <div class="col-lg-12 col-sm-12 col-md-12 mb-3">
+            <div class="card  bg-dark ">
+              <div id="chartdiv"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- End page content -->
+  <!-- Footer -->
+  <footer class="footer p-5">
+    <div class="container-gluid">
+      <a class=" w-100 d-block mt-4 mb-5" href="#"><img src="images/futurmakr-logo.svg" class="img-fluid"
+          alt="FuturMakr Studio"></a>
+      <div class="pb-3 w-100 text-right"> <span class="p-3 mb-5 mono-gray-4-color">© 2020 WONDRMAKR GROUP LTD. ALL
+          RIGHTS
+          RESERVED.</span> </div>
+      </nav>
+    </div>
+  </footer>
+  <script src="https://www.amcharts.com/lib/4/core.js"></script>
+  <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+  <script>
+
+    // Themes begin
+    am4core.useTheme(am4themes_animated);
+    // Themes end
+
+    var chart = am4core.create("chartdiv", am4charts.SankeyDiagram);
+    chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+    chart.data = [
+      { from: "D", width: 40, offset: -30 },
+      //{ from: "H", width: 50, offset: 15 },
+      { from: "Unit", width: 10, offset: 60 },
+      { from: "E", width: 40, offset: 30 },
+      { from: "A", to: "D", value: 10 },
+      { from: "Neri", to: "Unit", value: 10 },
+      { from: "Unit", to: "Skill", value: 8 },
+      { from: "Skill", to: "Job", value: 8 },
+      { from: "B", to: "D", value: 10 },
+      { from: "B", to: "E", value: 4 },
+      { from: "C", to: "E", value: 10 },
+      { from: "D", to: "G", value: 5 },
+      { from: "D", to: "I", value: 2 },
+      { from: "D", to: "H", value: 3 },
+      { from: "E", to: "H", value: 6 },
+      { from: "G", to: "J", value: 5 },
+      { from: "I", to: "J", value: 10 },
+      { from: "H", to: "J", value: 9 }
+    ];
+
+    let hoverState = chart.links.template.states.create("hover");
+    hoverState.properties.fillOpacity = 0.6;
+
+    chart.dataFields.fromName = "from";
+    chart.dataFields.toName = "to";
+    chart.dataFields.value = "value";
+
+    // for right-most label to fit
+    chart.paddingRight = 30;
+
+    // make nodes draggable
+    var nodeTemplate = chart.nodes.template;
+    nodeTemplate.inert = true;
+    nodeTemplate.readerTitle = "Drag me!";
+    nodeTemplate.showSystemTooltip = true;
+    nodeTemplate.width = 20;
+
+    nodeTemplate.propertyFields.width = "width";
+
+    nodeTemplate.adapter.add("dx", function (dx, target) {
+      return target.dataItem ? target.dataItem.dataContext.offset || dx : dx;
+    })
+  </script>
+<script src="js/main.bundle.js"></script></body>
+
+</html>

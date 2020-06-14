@@ -60,6 +60,12 @@ module.exports = merge(common, {
       chunks: ['main'],
       minify: false,
     }),
+    new HtmlWebpackPlugin({
+      template: 'src/charts.html',
+      filename: 'charts.html',
+      chunks: ['main'],
+      minify: false,
+    }),
   ],
   module: {
     rules: [
