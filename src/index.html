@@ -92,7 +92,7 @@ holistic talent development system">
   <!-- Parkr Button-->
   <img class="open-button" onclick="openParkr()" src="assets/images/logos/Parker-quick-pulse-256px-audio.gif"
     alt="Parkr">
-  <div class="chat-popup" id="parkr">
+  <div class="chat-popup" id="parkr-bot">
     <div class="parkr-container">
       <div id="webchat" role="main"></div>
       <button type="button" class="btn cancel mt-4" onclick="closeParkr()">Close</button>
@@ -229,7 +229,7 @@ holistic talent development system">
             </div>
           </div>
         </div>
-        <div class="tab-pane fade" id="wondermakr" role="tabpanel" aria-labelledby="contact-tab">
+        <div class="tab-pane fade" id="wondermakr" role="tabpanel" aria-labelledby="wondermakr-tab">
           <div class='pt-5'>
             <div class="row">
               <div class="col-md-12 col-lg-5 pt-5">
@@ -250,7 +250,7 @@ holistic talent development system">
             </div>
           </div>
         </div>
-        <div class="tab-pane fade" id="parkr" role="tabpanel" aria-labelledby="contact-tab">
+        <div class="tab-pane fade" id="parkr" role="tabpanel" aria-labelledby="parkr-tab">
           <div class='pt-5'>
             <div class="row">
               <div class="col-md-12 col-lg-5 pt-5">
@@ -511,11 +511,11 @@ holistic talent development system">
 
 
     function openParkr() {
-      document.getElementById("parkr").style.display = "block";
+      document.getElementById("parkr-bot").style.display = "block";
     }
 
     function closeParkr() {
-      document.getElementById("parkr").style.display = "none";
+      document.getElementById("parkr-bot").style.display = "none";
     }
 
 
