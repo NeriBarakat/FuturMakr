@@ -66,6 +66,18 @@ module.exports = merge(common, {
       chunks: ['main'],
       minify: false,
     }),
+    new HtmlWebpackPlugin({
+      template: 'src/solidGauge-chart.html',
+      filename: 'solidGauge-chart.html',
+      chunks: ['main'],
+      minify: false,
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/pathway-chart.html',
+      filename: 'pathway-chart.html',
+      chunks: ['main'],
+      minify: false,
+    }),
   ],
   module: {
     rules: [
