@@ -24,21 +24,29 @@
   holistic talent development system">
   <meta name="development" content="treenodes.com">
   <meta name="author" content="FuturMakr">
-  <title>FuturMakr - Charts</title>
-</head>
+  <title>FuturMakr - Radial line graph
+  </title>
+  <style>
+    #chartdiv {
+      width: 95%;
+      height: 500px;
+      padding: 10px;
+    }
+  </style>
+<link href="style/main.bundle.css" rel="stylesheet"></head>
 
 <body class="">
   <!-- Begin Header -->
   <header>
     <nav class="navbar navbar-expand-md navbar-dark mx-xs-4 mx-lg-5 my-4"> <a class=navbar-brand href=#> <img
-          src="assets/images/logos/futurMakr_white.svg" class="img-fluid" alt="FuturMakrStudio" style="width: 350px;">
+          src="images/futurMakr_white.svg" class="img-fluid" alt="FuturMakrStudio" style="width: 350px;">
       </a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenuNav"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
           class=navbar-toggler-icon></span> </button>
       <div class="collapse navbar-collapse" id=mainMenuNav>
         <div class="navbar-nav ml-auto">
           <div class="media bg-very-dark rounded p-3 my-2"><img class="avatar rounded-circle border border-primary mr-3"
-              src="assets/images/social/avatar1.jpg" alt="avatar">
+              src="images/avatar1.jpg" alt="avatar">
             <div class="media-body mr-5">
               <h5 class="mt-0 text-white">Marilyn Geidt</h5>Job title
             </div>
@@ -77,53 +85,7 @@
         <div class="row">
           <div class="col-lg-12 col-sm-12 col-md-12 mb-3">
             <div class="card  bg-dark ">
-              <a class="p-5 " target="_blank" rel="noopener noreferrer" href="pathway-chart.html">Pathway chart </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="solidGauge-chart.html">Solid Gauge
-                chart
-              </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="dateBasedData-chart.html"> Date based
-                data chart
-              </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="columns-moving-bullets.html"> Columns
-                with
-                moving bullets
-              </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="micro-sparklines-chart.html">Micro
-                Charts & Sparklines
-              </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="radial-line-graph.html">Radial line
-                graph
-              </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="plotting-chart.html">Multiple Value
-                Axes
-              </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="drill-treemap.html">Drill-down
-                Treemap
-              </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="forest-plot.html">
-                Forest Plot
-              </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="scatter-chart.html">
-                Scatter Chart
-              </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="stacked-area-chart.html">
-                Stacked area chart
-              </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="partitioned-bar-chart.html">
-                Partitioned bar chart
-              </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="column-chart.html">
-                Column With Rotated Series
-              </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="clustered-bar-chart.html">
-                Clustered Bar Chart
-              </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="force-directed-tree.html">
-                Collapsible force-directed tree
-              </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="polar-chart.html">
-                Polar Chart
-              </a>
+              <div id="chartdiv"></div>
             </div>
           </div>
         </div>
@@ -134,7 +96,7 @@
   <!-- Footer -->
   <footer class="footer p-5">
     <div class="container-gluid">
-      <a class=" w-100 d-block mt-4 mb-5" href="#"><img src="assets/images/logos/futurMakr_white.svg" class="img-fluid"
+      <a class=" w-100 d-block mt-4 mb-5" href="#"><img src="images/futurMakr_white.svg" class="img-fluid"
           alt="FuturMakr Studio" style="width: 300px;"></a>
       <div class="pb-3 w-100 text-right"> <span class="p-3 mb-5 mono-gray-4-color">© 2020 WONDRMAKR GROUP LTD. ALL
           RIGHTS
@@ -142,6 +104,70 @@
       </nav>
     </div>
   </footer>
-</body>
+  <script src="https://www.amcharts.com/lib/4/core.js"></script>
+  <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/dark.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+  <script>
+
+    // Themes begin
+    am4core.useTheme(am4themes_dark);
+    am4core.useTheme(am4themes_animated);
+    // Themes end
+
+    /* Create chart instance */
+    var chart = am4core.create("chartdiv", am4charts.RadarChart);
+
+    var data = [];
+    var value1 = 500;
+    var value2 = 600;
+
+    for (var i = 0; i < 12; i++) {
+      let date = new Date();
+      date.setMonth(i, 1);
+      value1 -= Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 50);
+      value2 -= Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 50);
+      data.push({ date: date, value1: value1, value2: value2 })
+    }
+
+    chart.data = data;
+
+    /* Create axes */
+    var categoryAxis = chart.xAxes.push(new am4charts.DateAxis());
+
+    var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+    valueAxis.extraMin = 0.2;
+    valueAxis.extraMax = 0.2;
+    valueAxis.tooltip.disabled = true;
+
+    /* Create and configure series */
+    var series1 = chart.series.push(new am4charts.RadarSeries());
+    series1.dataFields.valueY = "value1";
+    series1.dataFields.dateX = "date";
+    series1.strokeWidth = 3;
+    series1.tooltipText = "{valueY}";
+    series1.name = "Series 2";
+    series1.bullets.create(am4charts.CircleBullet);
+    series1.dataItems.template.locations.dateX = 0.5;
+
+    var series2 = chart.series.push(new am4charts.RadarSeries());
+    series2.dataFields.valueY = "value2";
+    series2.dataFields.dateX = "date";
+    series2.strokeWidth = 3;
+    series2.tooltipText = "{valueY}";
+    series2.name = "Series 2";
+    series2.bullets.create(am4charts.CircleBullet);
+    series2.dataItems.template.locations.dateX = 0.5;
+
+    chart.scrollbarX = new am4core.Scrollbar();
+    chart.scrollbarY = new am4core.Scrollbar();
+
+    chart.cursor = new am4charts.RadarCursor();
+
+    chart.legend = new am4charts.Legend();
+
+
+  </script>
+<script src="js/main.bundle.js"></script></body>
 
 </html>

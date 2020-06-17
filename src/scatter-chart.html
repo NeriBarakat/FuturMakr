@@ -1,0 +1,260 @@
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Font tag Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome tag -->
+  <script src="https://kit.fontawesome.com/baf5fd4609.js" crossorigin="anonymous"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169252299-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-169252299-1');
+  </script>
+  <!-- End -->
+  <!-- Meta -->
+  <meta name="description" content="End-to-end
+  holistic talent development system">
+  <meta name="development" content="treenodes.com">
+  <meta name="author" content="FuturMakr">
+  <title>FuturMakr - Scatter Chart</title>
+  <style>
+    #chartdiv {
+      width: 95%;
+      height: 500px;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body class="">
+  <!-- Begin Header -->
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark mx-xs-4 mx-lg-5 my-4"> <a class=navbar-brand href=#> <img
+          src="assets/images/logos/futurMakr_white.svg" class="img-fluid" alt="FuturMakrStudio" style="width: 350px;">
+      </a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenuNav"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
+          class=navbar-toggler-icon></span> </button>
+      <div class="collapse navbar-collapse" id=mainMenuNav>
+        <div class="navbar-nav ml-auto">
+          <div class="media bg-very-dark rounded p-3 my-2"><img class="avatar rounded-circle border border-primary mr-3"
+              src="assets/images/social/avatar1.jpg" alt="avatar">
+            <div class="media-body mr-5">
+              <h5 class="mt-0 text-white">Marilyn Geidt</h5>Job title
+            </div>
+            <div class=my-auto><button class="btn btn-outline-primary my-auto">logout</button></div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- End page Header -->
+
+  <!-- Begin page content -->
+  <main role="main" class="dashboard mb-4">
+
+    <div class="px-xs-2 mx-md-4 mx-lg-5 mb-5">
+      <nav class="navbar navbar-expand-lg navbar-dark p-0 nav-dashboard" aria-label="breadcrumb">
+        <div class="">
+          <a class="view-icon-ctr py-3 mr-4 rounded px-4" href="courses.html"></a>
+
+          <ol class="breadcrumb ">
+            <li class="breadcrumb-item active">Dashboard</li>
+          </ol>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-search p-2"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <form class="form-inline ml-auto mt-2 position-relative"><i class="fas fa-search p-2 position-absolute"
+              aria-hidden="true"></i><input class="form-control col-sm-12" placeholder="Search"></form>
+        </div>
+      </nav>
+    </div>
+    <div class="mx-md-4 mx-lg-5 mb-5">
+      <div class="col-12">
+        <div class="row">
+          <div class="col-lg-12 col-sm-12 col-md-12 mb-3">
+            <div class="card  bg-dark ">
+              <div id="chartdiv"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- End page content -->
+  <!-- Footer -->
+  <footer class="footer p-5">
+    <div class="container-gluid">
+      <a class=" w-100 d-block mt-4 mb-5" href="#"><img src="assets/images/logos/futurMakr_white.svg" class="img-fluid"
+          alt="FuturMakr Studio" style="width: 300px;"></a>
+      <div class="pb-3 w-100 text-right"> <span class="p-3 mb-5 mono-gray-4-color">© 2020 WONDRMAKR GROUP LTD. ALL
+          RIGHTS
+          RESERVED.</span> </div>
+      </nav>
+    </div>
+  </footer>
+  <script src="https://www.amcharts.com/lib/4/core.js"></script>
+  <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/dark.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+  <script>
+
+
+    // Themes begin
+    am4core.useTheme(am4themes_dark);
+    am4core.useTheme(am4themes_animated);
+    // Themes end
+
+    // Create chart instance
+    var chart = am4core.create("chartdiv", am4charts.XYChart);
+
+    // Add data
+    chart.data = [{
+      "ax": 1,
+      "ay": 0.5,
+      "bx": 1,
+      "by": 2.2
+    }, {
+      "ax": 2,
+      "ay": 1.3,
+      "bx": 2,
+      "by": 4.9
+    }, {
+      "ax": 3,
+      "ay": 2.3,
+      "bx": 3,
+      "by": 5.1
+    }, {
+      "ax": 4,
+      "ay": 2.8,
+      "bx": 4,
+      "by": 5.3
+    }, {
+      "ax": 5,
+      "ay": 3.5,
+      "bx": 5,
+      "by": 6.1
+    }, {
+      "ax": 6,
+      "ay": 5.1,
+      "bx": 6,
+      "by": -8.3
+    }, {
+      "ax": 7,
+      "ay": 6.7,
+      "bx": -7,
+      "by": 10.5
+    }, {
+      "ax": 8,
+      "ay": 8,
+      "bx": -8,
+      "by": 12.3
+    }, {
+      "ax": 9,
+      "ay": 8.9,
+      "bx": -9,
+      "by": -14.5
+    }, {
+      "ax": 10,
+      "ay": 9.7,
+      "bx": -10,
+      "by": -15
+    }, {
+      "ax": 11,
+      "ay": 10.4,
+      "bx": -11,
+      "by": -18.8
+    }, {
+      "ax": 12,
+      "ay": 11.7,
+      "bx": -12,
+      "by": -19
+    }];
+
+    // Create axes
+    var valueAxisX = chart.xAxes.push(new am4charts.ValueAxis());
+    valueAxisX.title.text = 'X Axis';
+    valueAxisX.renderer.minGridDistance = 40;
+
+    // Create value axis
+    var valueAxisY = chart.yAxes.push(new am4charts.ValueAxis());
+    valueAxisY.title.text = 'Y Axis';
+
+    // Create series
+    var lineSeries = chart.series.push(new am4charts.LineSeries());
+    lineSeries.dataFields.valueY = "ay";
+    lineSeries.dataFields.valueX = "ax";
+    lineSeries.strokeOpacity = 0;
+
+    var lineSeries2 = chart.series.push(new am4charts.LineSeries());
+    lineSeries2.dataFields.valueY = "by";
+    lineSeries2.dataFields.valueX = "bx";
+    lineSeries2.strokeOpacity = 0;
+
+    // Add a bullet
+    var bullet = lineSeries.bullets.push(new am4charts.Bullet());
+
+    // Add a triangle to act as am arrow
+    var arrow = bullet.createChild(am4core.Triangle);
+    arrow.horizontalCenter = "middle";
+    arrow.verticalCenter = "middle";
+    arrow.strokeWidth = 0;
+    arrow.fill = chart.colors.getIndex(0);
+    arrow.direction = "top";
+    arrow.width = 12;
+    arrow.height = 12;
+
+    // Add a bullet
+    var bullet2 = lineSeries2.bullets.push(new am4charts.Bullet());
+
+    // Add a triangle to act as am arrow
+    var arrow2 = bullet2.createChild(am4core.Triangle);
+    arrow2.horizontalCenter = "middle";
+    arrow2.verticalCenter = "middle";
+    arrow2.rotation = 180;
+    arrow2.strokeWidth = 0;
+    arrow2.fill = chart.colors.getIndex(3);
+    arrow2.direction = "top";
+    arrow2.width = 12;
+    arrow2.height = 12;
+
+    //add the trendlines
+    var trend = chart.series.push(new am4charts.LineSeries());
+    trend.dataFields.valueY = "value2";
+    trend.dataFields.valueX = "value";
+    trend.strokeWidth = 2
+    trend.stroke = chart.colors.getIndex(0);
+    trend.strokeOpacity = 0.7;
+    trend.data = [
+      { "value": 1, "value2": 2 },
+      { "value": 12, "value2": 11 }
+    ];
+
+    var trend2 = chart.series.push(new am4charts.LineSeries());
+    trend2.dataFields.valueY = "value2";
+    trend2.dataFields.valueX = "value";
+    trend2.strokeWidth = 2
+    trend2.stroke = chart.colors.getIndex(3);
+    trend2.strokeOpacity = 0.7;
+    trend2.data = [
+      { "value": 1, "value2": 1 },
+      { "value": 12, "value2": 19 }
+    ];
+
+    //scrollbars
+    chart.scrollbarX = new am4core.Scrollbar();
+    chart.scrollbarY = new am4core.Scrollbar();
+  </script>
+</body>
+
+</html>

@@ -58,6 +58,76 @@ module.exports = merge(common, {
       filename: 'solidGauge-chart.html',
       chunks: ['main'],
     }),
+    new HtmlWebpackPlugin({
+      template: 'src/dateBasedData-chart.html',
+      filename: 'dateBasedData-chart.html',
+      chunks: ['main'],
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/columns-moving-bullets.html',
+      filename: 'columns-moving-bullets.html',
+      chunks: ['main'],
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/micro-sparklines-chart.html',
+      filename: 'micro-sparklines-chart.html',
+      chunks: ['main'],
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/radial-line-graph.html',
+      filename: 'radial-line-graph.html',
+      chunks: ['main'],
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/plotting-chart.html',
+      filename: 'plotting-chart.html',
+      chunks: ['main'],
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/drill-treemap.html',
+      filename: 'drill-treemap.html',
+      chunks: ['main'],
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/forest-plot.html',
+      filename: 'forest-plot.html',
+      chunks: ['main'],
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/scatter-chart.html',
+      filename: 'scatter-chart.html',
+      chunks: ['main'],
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/stacked-area-chart.html',
+      filename: 'stacked-area-chart.html',
+      chunks: ['main'],
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/partitioned-bar-chart.html',
+      filename: 'partitioned-bar-chart.html',
+      chunks: ['main'],
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/column-chart.html',
+      filename: 'column-chart.html',
+      chunks: ['main'],
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/clustered-bar-chart.html',
+      filename: 'clustered-bar-chart.html',
+      chunks: ['main'],
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/force-directed-tree.html',
+      filename: 'force-directed-tree.html',
+      chunks: ['main'],
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/polar-chart.html',
+      filename: 'polar-chart.html',
+      chunks: ['main'],
+    }),
   ],
   module: {
     rules: [

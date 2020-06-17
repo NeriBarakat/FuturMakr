@@ -1,0 +1,239 @@
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Font tag Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome tag -->
+  <script src="https://kit.fontawesome.com/baf5fd4609.js" crossorigin="anonymous"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169252299-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-169252299-1');
+  </script>
+  <!-- End -->
+  <!-- Meta -->
+  <meta name="description" content="End-to-end
+  holistic talent development system">
+  <meta name="development" content="treenodes.com">
+  <meta name="author" content="FuturMakr">
+  <title>FuturMakr - Multiple Value Axes
+  </title>
+  <style>
+    #chartdiv {
+      width: 95%;
+      height: 500px;
+      padding: 10px;
+    }
+  </style>
+<link href="style/main.bundle.css" rel="stylesheet"></head>
+
+<body class="">
+  <!-- Begin Header -->
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark mx-xs-4 mx-lg-5 my-4"> <a class=navbar-brand href=#> <img
+          src="images/futurMakr_white.svg" class="img-fluid" alt="FuturMakrStudio" style="width: 350px;">
+      </a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenuNav"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
+          class=navbar-toggler-icon></span> </button>
+      <div class="collapse navbar-collapse" id=mainMenuNav>
+        <div class="navbar-nav ml-auto">
+          <div class="media bg-very-dark rounded p-3 my-2"><img class="avatar rounded-circle border border-primary mr-3"
+              src="images/avatar1.jpg" alt="avatar">
+            <div class="media-body mr-5">
+              <h5 class="mt-0 text-white">Marilyn Geidt</h5>Job title
+            </div>
+            <div class=my-auto><button class="btn btn-outline-primary my-auto">logout</button></div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- End page Header -->
+
+  <!-- Begin page content -->
+  <main role="main" class="dashboard mb-4">
+
+    <div class="px-xs-2 mx-md-4 mx-lg-5 mb-5">
+      <nav class="navbar navbar-expand-lg navbar-dark p-0 nav-dashboard" aria-label="breadcrumb">
+        <div class="">
+          <a class="view-icon-ctr py-3 mr-4 rounded px-4" href="courses.html"></a>
+
+          <ol class="breadcrumb ">
+            <li class="breadcrumb-item active">Dashboard</li>
+          </ol>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-search p-2"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <form class="form-inline ml-auto mt-2 position-relative"><i class="fas fa-search p-2 position-absolute"
+              aria-hidden="true"></i><input class="form-control col-sm-12" placeholder="Search"></form>
+        </div>
+      </nav>
+    </div>
+    <div class="mx-md-4 mx-lg-5 mb-5">
+      <div class="col-12">
+        <div class="row">
+          <div class="col-lg-12 col-sm-12 col-md-12 mb-3">
+            <div class="card  bg-dark ">
+              <div id="chartdiv"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- End page content -->
+  <!-- Footer -->
+  <footer class="footer p-5">
+    <div class="container-gluid">
+      <a class=" w-100 d-block mt-4 mb-5" href="#"><img src="images/futurMakr_white.svg" class="img-fluid"
+          alt="FuturMakr Studio" style="width: 300px;"></a>
+      <div class="pb-3 w-100 text-right"> <span class="p-3 mb-5 mono-gray-4-color">© 2020 WONDRMAKR GROUP LTD. ALL
+          RIGHTS
+          RESERVED.</span> </div>
+      </nav>
+    </div>
+  </footer>
+  <script src="https://www.amcharts.com/lib/4/core.js"></script>
+  <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/dark.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+  <script>
+
+
+    // Themes begin
+    am4core.useTheme(am4themes_dark);
+    am4core.useTheme(am4themes_animated);
+    // Themes end
+
+    // Create chart instance
+    var chart = am4core.create("chartdiv", am4charts.XYChart);
+
+    //
+
+    // Increase contrast by taking evey second color
+    chart.colors.step = 2;
+
+    // Add data
+    chart.data = generateChartData();
+
+    // Create axes
+    var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+    dateAxis.renderer.minGridDistance = 50;
+
+    // Create series
+    function createAxisAndSeries(field, name, opposite, bullet) {
+      var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+      if (chart.yAxes.indexOf(valueAxis) != 0) {
+        valueAxis.syncWithAxis = chart.yAxes.getIndex(0);
+      }
+
+      var series = chart.series.push(new am4charts.LineSeries());
+      series.dataFields.valueY = field;
+      series.dataFields.dateX = "date";
+      series.strokeWidth = 2;
+      series.yAxis = valueAxis;
+      series.name = name;
+      series.tooltipText = "{name}: [bold]{valueY}[/]";
+      series.tensionX = 0.8;
+      series.showOnInit = true;
+
+      var interfaceColors = new am4core.InterfaceColorSet();
+
+      switch (bullet) {
+        case "triangle":
+          var bullet = series.bullets.push(new am4charts.Bullet());
+          bullet.width = 12;
+          bullet.height = 12;
+          bullet.horizontalCenter = "middle";
+          bullet.verticalCenter = "middle";
+
+          var triangle = bullet.createChild(am4core.Triangle);
+          triangle.stroke = interfaceColors.getFor("background");
+          triangle.strokeWidth = 2;
+          triangle.direction = "top";
+          triangle.width = 12;
+          triangle.height = 12;
+          break;
+        case "rectangle":
+          var bullet = series.bullets.push(new am4charts.Bullet());
+          bullet.width = 10;
+          bullet.height = 10;
+          bullet.horizontalCenter = "middle";
+          bullet.verticalCenter = "middle";
+
+          var rectangle = bullet.createChild(am4core.Rectangle);
+          rectangle.stroke = interfaceColors.getFor("background");
+          rectangle.strokeWidth = 2;
+          rectangle.width = 10;
+          rectangle.height = 10;
+          break;
+        default:
+          var bullet = series.bullets.push(new am4charts.CircleBullet());
+          bullet.circle.stroke = interfaceColors.getFor("background");
+          bullet.circle.strokeWidth = 2;
+          break;
+      }
+
+      valueAxis.renderer.line.strokeOpacity = 1;
+      valueAxis.renderer.line.strokeWidth = 2;
+      valueAxis.renderer.line.stroke = series.stroke;
+      valueAxis.renderer.labels.template.fill = series.stroke;
+      valueAxis.renderer.opposite = opposite;
+    }
+
+    createAxisAndSeries("visits", "Visits", false, "circle");
+    createAxisAndSeries("views", "Views", true, "triangle");
+    createAxisAndSeries("hits", "Hits", true, "rectangle");
+
+    // Add legend
+    chart.legend = new am4charts.Legend();
+
+    // Add cursor
+    chart.cursor = new am4charts.XYCursor();
+
+    // generate some random data, quite different range
+    function generateChartData() {
+      var chartData = [];
+      var firstDate = new Date();
+      firstDate.setDate(firstDate.getDate() - 100);
+      firstDate.setHours(0, 0, 0, 0);
+
+      var visits = 1600;
+      var hits = 2900;
+      var views = 8700;
+
+      for (var i = 0; i < 15; i++) {
+        // we create date objects here. In your data, you can have date strings
+        // and then set format of your dates using chart.dataDateFormat property,
+        // however when possible, use date objects, as this will speed up chart rendering.
+        var newDate = new Date(firstDate);
+        newDate.setDate(newDate.getDate() + i);
+
+        visits += Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 10);
+        hits += Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 10);
+        views += Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 10);
+
+        chartData.push({
+          date: newDate,
+          visits: visits,
+          hits: hits,
+          views: views
+        });
+      }
+      return chartData;
+    }
+  </script>
+<script src="js/main.bundle.js"></script></body>
+
+</html>

@@ -24,21 +24,28 @@
   holistic talent development system">
   <meta name="development" content="treenodes.com">
   <meta name="author" content="FuturMakr">
-  <title>FuturMakr - Charts</title>
-</head>
+  <title>FuturMakr - Clustered Bar Chart</title>
+  <style>
+    #chartdiv {
+      width: 95%;
+      height: 500px;
+      padding: 10px;
+    }
+  </style>
+<link href="style/main.bundle.css" rel="stylesheet"></head>
 
 <body class="">
   <!-- Begin Header -->
   <header>
     <nav class="navbar navbar-expand-md navbar-dark mx-xs-4 mx-lg-5 my-4"> <a class=navbar-brand href=#> <img
-          src="assets/images/logos/futurMakr_white.svg" class="img-fluid" alt="FuturMakrStudio" style="width: 350px;">
+          src="images/futurMakr_white.svg" class="img-fluid" alt="FuturMakrStudio" style="width: 350px;">
       </a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenuNav"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
           class=navbar-toggler-icon></span> </button>
       <div class="collapse navbar-collapse" id=mainMenuNav>
         <div class="navbar-nav ml-auto">
           <div class="media bg-very-dark rounded p-3 my-2"><img class="avatar rounded-circle border border-primary mr-3"
-              src="assets/images/social/avatar1.jpg" alt="avatar">
+              src="images/avatar1.jpg" alt="avatar">
             <div class="media-body mr-5">
               <h5 class="mt-0 text-white">Marilyn Geidt</h5>Job title
             </div>
@@ -77,53 +84,7 @@
         <div class="row">
           <div class="col-lg-12 col-sm-12 col-md-12 mb-3">
             <div class="card  bg-dark ">
-              <a class="p-5 " target="_blank" rel="noopener noreferrer" href="pathway-chart.html">Pathway chart </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="solidGauge-chart.html">Solid Gauge
-                chart
-              </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="dateBasedData-chart.html"> Date based
-                data chart
-              </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="columns-moving-bullets.html"> Columns
-                with
-                moving bullets
-              </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="micro-sparklines-chart.html">Micro
-                Charts & Sparklines
-              </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="radial-line-graph.html">Radial line
-                graph
-              </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="plotting-chart.html">Multiple Value
-                Axes
-              </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="drill-treemap.html">Drill-down
-                Treemap
-              </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="forest-plot.html">
-                Forest Plot
-              </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="scatter-chart.html">
-                Scatter Chart
-              </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="stacked-area-chart.html">
-                Stacked area chart
-              </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="partitioned-bar-chart.html">
-                Partitioned bar chart
-              </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="column-chart.html">
-                Column With Rotated Series
-              </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="clustered-bar-chart.html">
-                Clustered Bar Chart
-              </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="force-directed-tree.html">
-                Collapsible force-directed tree
-              </a>
-              <a class="pl-5 pb-5" target="_blank" rel="noopener noreferrer" href="polar-chart.html">
-                Polar Chart
-              </a>
+              <div id="chartdiv"></div>
             </div>
           </div>
         </div>
@@ -134,7 +95,7 @@
   <!-- Footer -->
   <footer class="footer p-5">
     <div class="container-gluid">
-      <a class=" w-100 d-block mt-4 mb-5" href="#"><img src="assets/images/logos/futurMakr_white.svg" class="img-fluid"
+      <a class=" w-100 d-block mt-4 mb-5" href="#"><img src="images/futurMakr_white.svg" class="img-fluid"
           alt="FuturMakr Studio" style="width: 300px;"></a>
       <div class="pb-3 w-100 text-right"> <span class="p-3 mb-5 mono-gray-4-color">© 2020 WONDRMAKR GROUP LTD. ALL
           RIGHTS
@@ -142,6 +103,84 @@
       </nav>
     </div>
   </footer>
-</body>
+  <script src="https://www.amcharts.com/lib/4/core.js"></script>
+  <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/dark.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+  <script>
+
+    // Themes begin
+    am4core.useTheme(am4themes_dark);
+    am4core.useTheme(am4themes_animated);
+    // Themes end
+
+    // Create chart instance
+    var chart = am4core.create("chartdiv", am4charts.XYChart);
+
+    // Add data
+    chart.data = [{
+      "year": 2005,
+      "income": 23.5,
+      "expenses": 18.1
+    }, {
+      "year": 2006,
+      "income": 26.2,
+      "expenses": 22.8
+    }, {
+      "year": 2007,
+      "income": 30.1,
+      "expenses": -23.9
+    }, {
+      "year": 2008,
+      "income": 29.5,
+      "expenses": -25.1
+    }, {
+      "year": 2009,
+      "income": 24.6,
+      "expenses": 25
+    }];
+
+    // Create axes
+    var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
+    categoryAxis.dataFields.category = "year";
+    categoryAxis.numberFormatter.numberFormat = "#";
+    categoryAxis.renderer.inversed = true;
+    categoryAxis.renderer.grid.template.location = 0;
+    categoryAxis.renderer.cellStartLocation = 0.1;
+    categoryAxis.renderer.cellEndLocation = 0.9;
+
+    var valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
+    valueAxis.renderer.opposite = true;
+
+    // Create series
+    function createSeries(field, name) {
+      var series = chart.series.push(new am4charts.ColumnSeries());
+      series.dataFields.valueX = field;
+      series.dataFields.categoryY = "year";
+      series.name = name;
+      series.columns.template.tooltipText = "{name}: [bold]{valueX}[/]";
+      series.columns.template.height = am4core.percent(100);
+      series.sequencedInterpolation = true;
+
+      var valueLabel = series.bullets.push(new am4charts.LabelBullet());
+      valueLabel.label.text = "{valueX}";
+      valueLabel.label.horizontalCenter = "left";
+      valueLabel.label.dx = 10;
+      valueLabel.label.hideOversized = false;
+      valueLabel.label.truncate = false;
+
+      var categoryLabel = series.bullets.push(new am4charts.LabelBullet());
+      categoryLabel.label.text = "{name}";
+      categoryLabel.label.horizontalCenter = "right";
+      categoryLabel.label.dx = -10;
+      categoryLabel.label.fill = am4core.color("#fff");
+      categoryLabel.label.hideOversized = false;
+      categoryLabel.label.truncate = false;
+    }
+
+    createSeries("income", "Income");
+    createSeries("expenses", "Expenses");
+  </script>
+<script src="js/main.bundle.js"></script></body>
 
 </html>
