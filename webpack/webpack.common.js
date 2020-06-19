@@ -5,12 +5,12 @@ module.exports = {
   entry: {
     main: './src/scripts/main.js',
   },
-  plugins: [
-    new Webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-    }),
-  ],
+  // plugins: [
+  //   new Webpack.ProvidePlugin({
+  //     $: 'jquery',
+  //     jQuery: 'jquery',
+  //   }),
+  // ],
   module: {
     rules: [
       {
